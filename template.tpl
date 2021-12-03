@@ -32,14 +32,32 @@ ___TEMPLATE_PARAMETERS___
 [
   {
     "type": "TEXT",
-    "name": "bottom",
-    "displayName": "bottom",
+    "name": "top",
+    "displayName": "top",
     "simpleValueType": true
   },
   {
     "type": "TEXT",
     "name": "right",
     "displayName": "right",
+    "simpleValueType": true
+  },
+  {
+    "type": "TEXT",
+    "name": "bottom",
+    "displayName": "bottom",
+    "simpleValueType": true
+  },
+  {
+    "type": "TEXT",
+    "name": "left",
+    "displayName": "left",
+    "simpleValueType": true
+  },
+  {
+    "type": "TEXT",
+    "name": "environment",
+    "displayName": "environment",
     "simpleValueType": true
   }
 ]
@@ -58,7 +76,10 @@ const injectScript = require('injectScript');
 if (data.bottom == undefined || data.bottom < 0) data.bottom = 20;
 if (data.right == undefined || data.bottom < 0) data.right = 20;
 
-const url = 'https://members.dev.123loadboard.com/partner-portal.js?bottom='+data.bottom +'&right='+data.right;
+var env = '';
+if (data.environment != undefined) env = data.environment + '.';
+
+const url = 'https://members.' + env + '123loadboard.com/partner-portal.js?bottom='+data.bottom +'&right='+data.right;
 
 //  log('injecting? ', url);
 
@@ -110,6 +131,6 @@ scenarios: []
 
 ___NOTES___
 
-Created on 12/2/2021, 5:13:10 PM
+Created on 12/3/2021, 12:04:37 PM
 
 
