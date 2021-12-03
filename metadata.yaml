@@ -1,5 +1,5 @@
-homepage: "https://sampletms.dev.123loadboard.com/"
-documentation: "https://sampletms.dev.123loadboard.com/documentation"
+homepage: "https://www.123loadboard.com/"
+documentation: "https://www.123loadboard.com/faqs-and-support/"
 versions:
-  - sha: 0bb912cc4a901292d50fbed54e05175561794aea
-    changeNotes: Initial commit
+  - sha: 3beb18e22982fa968328cc5d252382e189cea565
+    changeNotes: updated template

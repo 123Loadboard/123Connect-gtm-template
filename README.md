@@ -1,1 +1,1 @@
-# 123Connect-gtm-template
+GTM Template for integration with 123Connect
