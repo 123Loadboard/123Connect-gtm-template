@@ -73,15 +73,29 @@ ___SANDBOXED_JS_FOR_WEB_TEMPLATE___
 const queryPermission = require('queryPermission');
 const injectScript = require('injectScript');
 
-if (data.bottom == undefined || data.bottom < 0) data.bottom = 20;
-if (data.right == undefined || data.bottom < 0) data.right = 20;
+var top = "";
+var right = "";
+var bottom = "";
+var left = "";
+
+if ( (data.bottom == undefined || data.bottom < 0) && (data.right == undefined || data.right < 0) && (data.left == undefined || data.left < 0) || (data.top == undefined || data.top < 0)){
+  
+ bottom = '&bottom=' + 20;
+ right = '&right='+ 20;
+
+}
+
+if (data.top != undefined)  top = '&top=' + data.top;
+if (data.right != undefined)  right = '&right=' + data.right;
+if (data.bottom != undefined)  bottom = '&bottom=' + data.bottom;
+if (data.left != undefined)  left = '&left=' + data.left;
 
 var env = '';
 if (data.environment != undefined) env = data.environment + '.';
 
-const url = 'https://members.' + env + '123loadboard.com/partner-portal.js?bottom='+data.bottom +'&right='+data.right;
+const url = 'https://members.' + env + '123loadboard.com/partner-portal.js?'+ bottom + right + top + left;
 
-//  log('injecting? ', url);
+
 
 if (queryPermission('inject_script', url)) {
 //  log('injecting ', url);
@@ -110,6 +124,14 @@ ___WEB_PERMISSIONS___
               {
                 "type": 1,
                 "string": "https://members.dev.123loadboard.com/partner-portal.js?*"
+              },
+              {
+                "type": 1,
+                "string": "https://members.ci.123loadboard.com/partner-portal.js?*"
+              },
+              {
+                "type": 1,
+                "string": "https://members.123loadboard.com/partner-portal.js?*"
               }
             ]
           }
@@ -131,6 +153,6 @@ scenarios: []
 
 ___NOTES___
 
-Created on 12/3/2021, 12:04:37 PM
+Created on 12/6/2021, 9:38:26 AM
 
 
