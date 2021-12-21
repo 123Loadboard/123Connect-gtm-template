@@ -1,5 +1,11 @@
 homepage: "https://www.123loadboard.com/"
-documentation: "https://www.123loadboard.com/faqs-and-support/"
+documentation: "https://help.123loadboard.com/hc/en-us/articles/4416632910615"
 versions:
+  # Latest version
+  - sha: 56629d7acf01d6b3c9241d4000083c89f8d2b811
+    changeNotes: |2
+      updated permissions for environment, 
+      handling position in the screen
+  # Older versions
   - sha: 3beb18e22982fa968328cc5d252382e189cea565
     changeNotes: updated template
