@@ -3,12 +3,12 @@ documentation: "https://help.123loadboard.com/hc/en-us/articles/4416632910615"
 versions:
   # Latest version 
   - sha: db4effa2ab5dcd1273d964e74f3d0a985fab9a9e
-    changeNotes: |3
+    changeNotes: |2
       removed unused code, 
       updated license and documentation link
   # Older versions
  - sha: 56629d7acf01d6b3c9241d4000083c89f8d2b811
-   changeNotes: |2
+   changeNotes: 
       updated permissions for environment, 
       handling position in the screen
   - sha: 3beb18e22982fa968328cc5d252382e189cea565
